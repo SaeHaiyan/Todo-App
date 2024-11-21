@@ -57,8 +57,8 @@ public class TaskServlet extends HttpServlet {
                     out.println("<td>" + resultSet.getString("description") + "</td>");
                     out.println("<td>" + (resultSet.getBoolean("completed") ? "Completed" : "Pending") + "</td>");
                     out.println("<td>");
-                    out.println("<a href='EditTaskServlet?id=" + resultSet.getInt("id") + "' class='btn btn-warning btn-sm'>Edit</a> | ");
-                    out.println("<a href='DeleteTaskServlet?id=" + resultSet.getInt("id") + "' class='btn btn-danger btn-sm'>Delete</a>");
+                    out.println("<a href='EditTaskServlet?id=" + resultSet.getInt("id") + "' class='btn' style='color: #1E4174; font-weight: bold;'>Edit</a> | ");
+                    out.println("<a href='DeleteTaskServlet?id=" + resultSet.getInt("id") + "' class='btn' style='color: #1E4174; font-weight: bold;'>Delete</a>");
                     out.println("</td>");
                     out.println("</tr>");
                     rowNum++;

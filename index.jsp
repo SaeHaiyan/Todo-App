@@ -105,5 +105,15 @@
         </div>
     </div>
 </div>
+<% 
+    String success = request.getParameter("success"); 
+    if ("true".equals(success)) { 
+%>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        Task created successfully!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
 
 <%@ include file="footer.jsp" %>

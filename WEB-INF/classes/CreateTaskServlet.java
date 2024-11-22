@@ -33,6 +33,9 @@ public class CreateTaskServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("index.jsp");
+        // After task creation is successful
+        response.sendRedirect("index.jsp?success=true");
+
+
     }
 }

@@ -1,4 +1,4 @@
-<%@ include file="header.jsp" %>
+<%@ include file="header.jsp" %> <!-- Including header.jsp -->
 
 <style>
     /* Change the entire page background color */

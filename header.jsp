@@ -68,7 +68,7 @@
         /* Adjusting Navbar Items for Larger Screens */
         @media (min-width: 992px) {
             .navbar-nav {
-                margin-left: auto; /* Align the nav items to the right */
+                margin-left: auto; /* Aligns the nav items to the right */
             }
         }
     </style>
@@ -105,5 +105,10 @@
             </div>
         </nav>
     </header>
+
+    <!-- Include Bootstrap JS and Popper.js (make sure these are at the end) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
 </body>
 </html>

@@ -80,7 +80,7 @@
         <!-- Task Form Card without Card Header -->
         <div class="card">
             <div class="card-body">
-                <form action="UpdateTaskServlet" method="post">
+                <form action="UpdateTaskServlet" method="post" id="editTaskForm">
                     <!-- Hidden ID Field -->
                     <input type="hidden" name="id" value="${requestScope.taskId}" />
 
@@ -108,7 +108,7 @@
                     <!-- Buttons -->
                     <div class="btn-group">
                         <a href="index.jsp" class="btn btn-secondary">Back to Task List</a>
-                        <button type="submit" class="btn btn-primary">Update Task</button>
+                        <button type="submit" class="btn btn-primary" onclick="return confirmUpdate()">Update Task</button>
                     </div>
                 </form>
             </div>
@@ -118,5 +118,14 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Confirmation Script -->
+    <script>
+        function confirmUpdate() {
+            // Ask the user to confirm their action
+            return confirm("Are you sure you want to update this task?");
+        }
+    </script>
+
 </body>
 </html>

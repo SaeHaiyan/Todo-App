@@ -76,7 +76,7 @@
         <!-- Task Form Card without Card Header -->
         <div class="card">
             <div class="card-body">
-                <form action="CreateTaskServlet" method="post">
+                <form id="taskForm" action="CreateTaskServlet" method="post">
                     <div class="mb-3">
                         <label for="task" class="form-label">Task</label>
                         <input type="text" id="task" name="task" class="form-control" required>
@@ -96,13 +96,20 @@
                     <!-- Separate buttons with adjusted alignment -->
                     <div class="btn-group">
                         <a href="index.jsp" class="btn btn-secondary">Back to Task List</a>
-                        <button type="submit" class="btn btn-success">Create Task</button>
+                        <button type="button" class="btn btn-success" onclick="confirmSubmission()">Create Task</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     
+    <script>
+        function confirmSubmission() {
+            if (confirm("Are you sure you want to create this task?")) {
+                document.getElementById("taskForm").submit();
+            }
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>

@@ -35,6 +35,6 @@ public class UpdateTaskServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("index.jsp?update=true");
     }
 }

@@ -104,16 +104,30 @@
             </table>
         </div>
     </div>
-</div>
-<% 
+    <!-- Success Alert -->
+    <% 
     String success = request.getParameter("success"); 
     if ("true".equals(success)) { 
-%>
+    %>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         Task created successfully!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-<% } %>
+    <% } %>
+
+    <!-- Update Success Alert -->
+    <% 
+        String update = request.getParameter("update"); 
+        if ("true".equals(update)) { 
+    %>
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            Task updated successfully!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <% } %>
+
+
+</div>
 
 
 <%@ include file="footer.jsp" %>
